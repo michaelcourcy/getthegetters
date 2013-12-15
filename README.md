@@ -3,17 +3,17 @@ Useful when you work with a template technology (JSP, Freemarkers, Jasper ...) a
 
 Here is an example 
 
-Obj1 obj1 = new Obj1();
-
-GetTheGetters getTheGetters = new GetTheGetters(new GetTheGetters.GetterHandler() {
+	Obj1 obj1 = new Obj1();
 	
-	public void handle(String getter, Object value) {
-		System.out.println(getter + " : " + value);
-	}
-	
-});
+	GetTheGetters getTheGetters = new GetTheGetters(new GetTheGetters.GetterHandler() {
+		
+		public void handle(String getter, Object value) {
+			System.out.println(getter + " : " + value);
+		}
+		
+	});
 
-getTheGetters.getTheGetters(obj1);
+	getTheGetters.getTheGetters(obj1);
 
 
 -- RESULT IN THE CONSOLE --
