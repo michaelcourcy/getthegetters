@@ -43,11 +43,12 @@ public class GetTheGetters
 
 
 	/**
-	 * Get all the getters of this object every time a 
-	 * getter on a primitive type the pair getter / Value 
-	 * is passed to the getterHandler associated to this object.
+	 * Get all the plublic getters of objectToAnalyse.  
+     * 
+     * Every time a getter of a primitive type is found, the pair getter/Value 
+	 * is passed to the getterHandler.
 	 * 
-	 * See JUnit test to see how it works.
+	 * See JUnit test to see example.
 	 *  
 	 * @param objectToAnalyse
 	 * @throws IllegalAccessException
