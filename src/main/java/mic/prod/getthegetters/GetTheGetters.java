@@ -10,8 +10,8 @@ import java.util.Iterator;
 import org.apache.commons.lang3.ClassUtils;
 
 /**
- * This class aims to provide all the getters and their value on a class.
- * It works recursively on non null object or not null collection.
+ * This class aims to provide all the getters and their value on an object.
+ * It works recursively on not null property or not null collection.
  *
  */
 public class GetTheGetters 
