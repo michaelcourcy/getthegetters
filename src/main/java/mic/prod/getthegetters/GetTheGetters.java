@@ -11,7 +11,12 @@ import org.apache.commons.lang3.ClassUtils;
 
 /**
  * This class aims to provide all the getters and their value on an object. It
- * works recursively on not null property or not null collection.
+ * works recursively on not null property.
+ * 
+ * If the property is not primitive or string we keep on introspecting on the object.
+ * 
+ * If the property is an array or a collection, we keep on introspecting in each element of
+ * the collection.
  * 
  */
 public class GetTheGetters {
@@ -86,6 +91,11 @@ public class GetTheGetters {
 		}
 
 		for (PropertyDescriptor propertyDescriptor : propertyDescriptors) {
+			
+			//check we have a read method
+			if (propertyDescriptor.getReadMethod()==null){
+				continue;
+			}
 
 			// we get the value of the getter
 			Object value;
